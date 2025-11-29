@@ -62,9 +62,7 @@ public class Wordle {
             }
             
         }
-        for (int j = 0; j < resultRow.length; j++) {
-            System.out.println(resultRow[j]);
-        }
+        
     }
 
     // Store guess string (chars) into the given row of guesses 2D array.
@@ -126,13 +124,12 @@ public class Wordle {
         char[][] results = new char[MAX_ATTEMPTS][WORD_LENGTH];
 
         // Prepare to read from the standart input 
-        In inp = new In();
+        In in = new In();
 
         int attempt = 0;
         boolean won = false;
 
         while (attempt < MAX_ATTEMPTS && !won) {
-            In in = new In();
             String guess = "";
             boolean valid = false;
 
@@ -168,6 +165,6 @@ public class Wordle {
             System.out.printf("Sorry, you did not guess the word.\n The secret word was: %s",secret );   
              }
 
-        inp.close();
+        in.close();
     }
 }
